@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indonesian Boat Racing & Aura Farming</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 568px)" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet" />
+  <script src="mobile.js" defer></script>
+</head>
+
+<body>
+
+
+  <!-- Template Credit -->
+  <div class="template-credit">
+    Template inspired by
+    <a href="https://rannah.goldenfab.com/" target="_blank">Rannah by GoldenFab</a>
+  </div>
+
+  <!-- Header -->
+  <div id="header">
+
+    <ul id="navigation">
+      <li class="selected"><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="gallery.html">gallery</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Banner Image -->
+  <div id="main-banner">
+    <img src="images/boat-race-banner.jpg" alt="Indonesian Boat Race" />
+  </div>
+
+  <!-- Intro Section -->
+  <section class="welcome-text">
+    <h2>THE AURA FARMING BOAT RACERS OF INDONESIA</h2>
+    <p>
+      Deep in the heart of the archipelago lies an ancient rivalry — not of war, but of wind, waves, and inner energy.
+    </p>
+    <p>
+      Explore the cultural adrenaline of traditional boat racing, and the serene, mystical practice of aura farming —
+      the harmony of motion and meditation.
+    </p>
+  </section>
+
+  <!-- Disciplines Preview -->
+  <ul class="character-gallery">
+    <li>
+      <img src="images/boat-racer.jpg" alt="Boat Racer" class="character-image" />
+      <span>Traditional Boat Racer</span>
+    </li>
+    <li>
+      <img src="images/aura-kid.jpg" alt="Aura Farming Child" class="character-image" />
+      <span>Young Aura Farmer</span>
+    </li>
+  </ul>
+
+  <!-- Footer -->
+  <div id="footer">
+    <p>&copy; Darshan Asmoro, 2025. All rights reserved.</p>
+  </div>
+
+  <script>
+    function suggestDiscipline() {
+      const mood = document.getElementById("mood-input").value.toLowerCase();
+      const result = document.getElementById("discipline-result");
+
+      if (!mood) {
+        result.textContent = "Tell us how you feel first!";
+        return;
+      }
+
+      if (["aggressive", "fast", "wild", "competitive"].some(v => mood.includes(v))) {
+        result.textContent = "🔥 You're a natural for Indonesian Boat Racing!";
+      } else if (["calm", "peaceful", "spiritual", "dreamy", "focused"].some(v => mood.includes(v))) {
+        result.textContent = "✨ You belong in the tranquil fields of Aura Farming.";
+      } else {
+        result.textContent = "🌊 You are a hybrid spirit — both racer and farmer.";
+      }
+    }
+
+    // Optional: Alert when visiting homepage
+    if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
+      window.addEventListener("load", function () {
+        alert("🌟 Welcome to the world of Indonesian Boat Racing & Aura Farming!");
+      });
+    }
+  </script>
+</body>
+
+</html>
